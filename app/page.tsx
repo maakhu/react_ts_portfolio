@@ -166,8 +166,8 @@ export default function Home() {
               <Image
                 src={web1}
                 className="rounded-lg object-cover"
-                width={"100%"}
-                height={"100%"}
+                width={"100"}
+                height={"100"}
                 layout="responsive"
                 alt={"web design"}
               />
@@ -176,8 +176,8 @@ export default function Home() {
               <Image
                 src={web2}
                 className="rounded-lg object-cover"
-                width={"100%"}
-                height={"100%"}
+                width={"100"}
+                height={"100"}
                 layout="responsive"
                 alt={"web design"}
               />
@@ -186,8 +186,8 @@ export default function Home() {
               <Image
                 src={web3}
                 className="rounded-lg object-cover"
-                width={"100%"}
-                height={"100%"}
+                width={"100"}
+                height={"100"}
                 layout="responsive"
                 alt={"web design"}
               />
@@ -196,8 +196,8 @@ export default function Home() {
               <Image
                 src={web4}
                 className="rounded-lg object-cover"
-                width={"100%"}
-                height={"100%"}
+                width={"100"}
+                height={"100"}
                 layout="responsive"
                 alt={"web design"}
               />
@@ -206,8 +206,8 @@ export default function Home() {
               <Image
                 src={web5}
                 className="rounded-lg object-cover"
-                width={"100%"}
-                height={"100%"}
+                width={"100"}
+                height={"100"}
                 layout="responsive"
                 alt={"web design"}
               />
@@ -216,8 +216,8 @@ export default function Home() {
               <Image
                 src={web6}
                 className="rounded-lg object-cover"
-                width={"100%"}
-                height={"100%"}
+                width={"100"}
+                height={"100"}
                 layout="responsive"
                 alt={"web design"}
               />
