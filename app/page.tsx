@@ -32,7 +32,7 @@ export default function Home() {
           <nav className="py-10 mb-12 flex justify-between">
             {" "}
             {/* padding top & bottom 10 */}
-            <h1 className={`text-xl font-extralight ${lightText} ${darkText}`}>developedbymaak</h1>
+            <h1 className={`text-xl font-extralight pr-5 ${lightText} ${darkText}`}>developedbymaak</h1>
             <ul className="flex items-center">
               <li>
                 <BsFillMoonStarsFill
