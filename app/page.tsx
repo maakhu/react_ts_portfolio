@@ -52,7 +52,7 @@ export default function Home() {
           </nav>
           <div className="text-center p-10">
             <h2 className="text-5xl py-2 text-teal-600 font-medium md:text-6xl">
-              Hi, I'm Máté Egri
+              Hi, my name is Máté Egri
             </h2>
             <h3 className={`text-2xl py-2 md:text-3xl ${darkText}`}>
               Full-stack Developer and Designer
