@@ -13,12 +13,40 @@ import web3 from "../public/web3.png";
 import web4 from "../public/web4.png";
 import web5 from "../public/web5.png";
 import web6 from "../public/web6.png";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
   const lightText = "text-gray-700";
   const darkText = "dark:text-slate-300";
+  function linkedin() {
+    window.open("https://www.linkedin.com/in/mate-egri/");
+  }
+  function github() {
+    window.open("https://github.com/maakhu");
+  }
+  const [isVisible, setIsVisible] = useState(false);
+
+  const handleScroll = () => {
+    if (window.pageYOffset > 300) {
+      setIsVisible(true);
+    } else {
+      setIsVisible(false);
+    }
+  };
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+  const handleClick = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <div className={darkMode ? "dark" : ""}>
       <Head>
@@ -32,7 +60,11 @@ export default function Home() {
           <nav className="py-10 mb-12 flex justify-between">
             {" "}
             {/* padding top & bottom 10 */}
-            <h1 className={`text-xl font-extralight pr-5 ${lightText} ${darkText}`}>developedbymaak</h1>
+            <h1
+              className={`text-xl font-extralight pr-5 ${lightText} ${darkText}`}
+            >
+              developedbymaak
+            </h1>
             <ul className="flex items-center">
               <li>
                 <BsFillMoonStarsFill
@@ -42,14 +74,35 @@ export default function Home() {
               </li>
               <li>
                 <a
-                  className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8"
-                  href="#"
+                  className="transition-all 
+                  duration-500 
+                  ease-in-out 
+                  bg-gradient-to-r from-cyan-500 to-teal-500 
+                  hover:from-cyan-600 hover:to-teal-600
+                  active:from-cyan-700 active:to-teal-700
+                  text-white px-4 py-2 rounded-md ml-8"
+                  href="/Mate_Egri_CV_with_cover_letter.pdf"
+                  download
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
-                  Resume
+                  <button> Resume</button>
                 </a>
               </li>
             </ul>
           </nav>
+          <div
+            className={`fixed bottom-4 right-4 z-50 ${
+              isVisible ? "opacity-100" : "opacity-0 pointer-events-none"
+            } transition-opacity duration-500 ease-in-out`}
+          >
+            <button
+              onClick={handleClick}
+              className="fixed bottom-4 right-4 bg-gradient-to-r from-cyan-500 to-teal-500 hover:from-cyan-600 hover:to-teal-600 active:from-cyan-700 active:to-teal-700 text-white px-4 py-2 rounded-md"
+            >
+              Back to top
+            </button>
+          </div>
           <div className="text-center p-10">
             <h2 className="text-5xl py-2 text-teal-600 font-medium md:text-6xl">
               Hi, my name is Máté Egri
@@ -58,14 +111,17 @@ export default function Home() {
               Full-stack Developer and Designer
             </h3>
             <p className="text-md py-5 leading-8 text-gray-700 md:text-xl max-w-xl mx-auto dark:text-slate-500">
-              Freelancer Web-development Magician
+              Handcrafting your functional websites and applications
             </p>
           </div>
-          <div className="text-5xl flex justify-center gap-6 py-3 text-gray-600 dark:text-slate-300">
-            <AiFillLinkedin />
-            <AiFillGithub />
+          <div className="text-5xl flex justify-center gap-6 py-3 text-gray-600 dark:text-slate-300 ">
+            <AiFillLinkedin
+              onClick={linkedin}
+              className="hover:shadow-xl cursor-pointer "
+            />
+            <AiFillGithub onClick={github} />
           </div>
-          <div className="relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-60 h-60 mt-20 overflow-hidden md:h-96 md:w-96 sm: h-40 w-40 mt-4">
+          <div className="relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-60 h-60 mt-20 overflow-hidden md:h-96 md:w-96 sm: h-40 w-40 mt-2">
             <Image
               src={mateDev}
               className="rounded-full "
@@ -75,7 +131,9 @@ export default function Home() {
         </section>
         <section>
           <div>
-            <h3 className={`text-3xl py1 md:text-3xl max-w-xl mx-auto pt-10 pb-5 ${darkText}`}>
+            <h3
+              className={`text-3xl py1 md:text-3xl max-w-xl mx-auto pt-10 pb-5 ${darkText}`}
+            >
               Services I offer
             </h3>
             <p className="text-md py-2 leading-8 text-gray-700 md:text-xl max-w-xl mx-auto dark:text-slate-300">
@@ -84,7 +142,7 @@ export default function Home() {
               application. I have expertise in various technologies and
               frameworks, such as {""}
               <span className="text-teal-500">
-                 HTML, CSS, JavaScript, React, Angular, Node.js, MongoDB, MySQL,
+                HTML, CSS, JavaScript, React, Angular, Node.js, MongoDB, MySQL,
                 Laravel
               </span>
               , and more. I can design and create user-friendly interfaces,
@@ -102,7 +160,13 @@ export default function Home() {
           </div>
           <div className="lg:flex gap-10">
             <div className="text-center shadow-lg p-10 rounded-xl my-10  dark:bg-white flex-1">
-              <Image src={design} width={100} height={100} style={{ margin: "0 auto" }} alt="design logo"/>
+              <Image
+                src={design}
+                width={100}
+                height={100}
+                style={{ margin: "0 auto" }}
+                alt="design logo"
+              />
               <h3 className="text-lg font-medium pt-8 pb-2  ">
                 Beautiful Designs
               </h3>
@@ -117,13 +181,19 @@ export default function Home() {
               <p className="text-gray-800 py-1">TailWind</p>
             </div>
             <div className="text-center shadow-lg p-10 rounded-xl my-10 dark:bg-white flex-1">
-              <Image src={code} width={100} height={100} style={{ margin: "0 auto" }} alt="code logo"/>
+              <Image
+                src={code}
+                width={100}
+                height={100}
+                style={{ margin: "0 auto" }}
+                alt="code logo"
+              />
               <h3 className="text-lg font-medium pt-8 pb-2 ">
                 Code your dream project
               </h3>
               <p className="py-2">
-                Do you have an idea for your next great website? Let`&apos;`s make it a
-                reality.
+                Do you have an idea for your next great website? Let&apos;s make
+                it a reality.
               </p>
               <h4 className="py-4 text-teal-600">Latest Technologies</h4>
               <p className="text-gray-800 py-1">TypeScript</p>
@@ -132,10 +202,18 @@ export default function Home() {
               <p className="text-gray-800 py-1">MongoDB</p>
             </div>
             <div className="text-center shadow-lg p-10 rounded-xl my-10 dark:bg-white flex-1">
-              <Image src={consulting} width={100} height={100} style={{ margin: "0 auto" }} className="text-right" alt="like logo"/>
+              <Image
+                src={consulting}
+                width={100}
+                height={100}
+                style={{ margin: "0 auto" }}
+                className="text-right"
+                alt="like logo"
+              />
               <h3 className="text-lg font-medium pt-8 pb-2 ">Consulting</h3>
               <p className="py-2">
-                Are you interested in feedback for your current project? Here it is how can I help you.
+                Are you interested in feedback for your current project? Here it
+                is how can I help you.
               </p>
               <h4 className="py-4 text-teal-600">I can assist you with</h4>
               <p className="text-gray-800 py-1">Code review</p>
@@ -147,10 +225,16 @@ export default function Home() {
         </section>
         <section>
           <div>
-            <h3 className={`text-3xl py1 md:text-xl max-w-xl mx-auto ${darkText}`}>Portfolio</h3>
-            <p className={`text-md py-2 leading-8 md:text-xl max-w-xl mx-auto text-gray-700 ${darkText}`}>
-              I have worked on a full-stack browser-based online multiplayer game project called Tribes,
-              where a player can  
+            <h3
+              className={`text-3xl py1 md:text-xl max-w-xl mx-auto ${darkText}`}
+            >
+              Portfolio
+            </h3>
+            <p
+              className={`text-md py-2 leading-8 md:text-xl max-w-xl mx-auto text-gray-700 ${darkText}`}
+            >
+              I have worked on a full-stack browser-based online multiplayer
+              game project called Tribes, where a player can
               <span className="text-teal-500">
                 HTML, CSS, JavaScript, React, Angular, Node.js, MongoDB, MySQL,
                 Laravel
