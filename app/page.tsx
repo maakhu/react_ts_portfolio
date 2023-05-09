@@ -122,7 +122,7 @@ export default function Home() {
                 Code your dream project
               </h3>
               <p className="py-2">
-                Do you have an idea for your next great website? Let's make it a
+                Do you have an idea for your next great website? Let`&apos;`s make it a
                 reality.
               </p>
               <h4 className="py-4 text-teal-600">Latest Technologies</h4>
