@@ -104,8 +104,8 @@ export default function Home() {
             </button>
           </div>
           <div className="text-center p-10">
-            <h2 className="text-5xl py-2 text-teal-600 font-medium md:text-6xl">
-              Hi, my name is Máté Egri
+            <h2 className="text-4xl py-2 text-teal-600 font-medium md:text-6xl">
+              Hi, I&apos;m Máté Egri
             </h2>
             <h3 className={`text-2xl py-2 md:text-3xl ${darkText}`}>
               Full-stack Developer and Designer
@@ -121,15 +121,15 @@ export default function Home() {
             />
             <AiFillGithub onClick={github} />
           </div>
-          <div className="relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-60 h-60 overflow-hidden md:h-96 md:w-96 sm:h-40 sm:w-40 sm:mt-2 sm:mb-6 ">
+          <div className="relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-60 h-60 overflow-hidden md:h-80 md:w-80 sm:h-50 sm:w-50">
             <Image
               src={mateDev}
-              className="rounded-full sm:mb-10"
+              className="rounded-full"
               alt={"Cartonised profile picture"}
             />
           </div>
         </section>
-        <section className="mt100">
+        <section>
           <div>
             <h3
               className={`text-3xl py1 md:text-3xl max-w-xl mx-auto pt-10 pb-5 sm:mb-50 sm:mt100 ${darkText}`}
