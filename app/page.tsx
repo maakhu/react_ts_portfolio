@@ -63,7 +63,7 @@ export default function Home() {
             <h1
               className={`text-xl font-extralight pr-5 ${lightText} ${darkText}`}
             >
-              developedbymaak
+              developed by máté egri
             </h1>
             <ul className="flex items-center">
               <li>
