@@ -3,7 +3,7 @@ import Head from "next/head";
 import { BsFillMoonStarsFill } from "react-icons/bs";
 import { AiFillLinkedin, AiFillGithub } from "react-icons/ai";
 import Image from "next/image";
-import mateDev from "../public/mateAvatar.png"; // Import using public folder
+import mateDev from "../public/mateAvatar.jpeg"; // Import using public folder
 import design from "../public/design.png";
 import code from "../public/code.png";
 import consulting from "../public/consulting.png";
