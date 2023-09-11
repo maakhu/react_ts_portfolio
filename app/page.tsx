@@ -230,10 +230,13 @@ export default function Home() {
               className={`text-md py-2 leading-8 md:text-xl max-w-xl mx-auto text-gray-700 ${darkText}`}
             >
               I have worked on a full-stack browser-based online multiplayer
-              game project called Tribes, where a player can
+              game project called Tribes, where a player can register, login, 
+              build an empire with units, buildings, and fight against other players. 
+              The following technologies were used in the project:
+              {/* add line break */}
+               <br />
               <span className="text-teal-500">
-                HTML, CSS, JavaScript, React, Angular, Node.js, MongoDB, MySQL,
-                Laravel
+                HTML, CSS, JavaScript, React, Node.js, Sequelise, MySQL
               </span>
               , and more. I can design and create user-friendly interfaces,
               <span className="text-teal-500">web services and APIs</span>, data
@@ -255,46 +258,6 @@ export default function Home() {
             <div className="basis-1/3 flex-1">
               <Image
                 src={web2}
-                className="rounded-lg object-cover"
-                width={"100"}
-                height={"100"}
-                layout="responsive"
-                alt={"web design"}
-              />
-            </div>
-            <div className="basis-1/3 flex-1">
-              <Image
-                src={web3}
-                className="rounded-lg object-cover"
-                width={"100"}
-                height={"100"}
-                layout="responsive"
-                alt={"web design"}
-              />
-            </div>
-            <div className="basis-1/3 flex-1">
-              <Image
-                src={web4}
-                className="rounded-lg object-cover"
-                width={"100"}
-                height={"100"}
-                layout="responsive"
-                alt={"web design"}
-              />
-            </div>
-            <div className="basis-1/3 flex-1">
-              <Image
-                src={web5}
-                className="rounded-lg object-cover"
-                width={"100"}
-                height={"100"}
-                layout="responsive"
-                alt={"web design"}
-              />
-            </div>
-            <div className="basis-1/3 flex-1">
-              <Image
-                src={web6}
                 className="rounded-lg object-cover"
                 width={"100"}
                 height={"100"}
